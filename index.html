@@ -4,26 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ggog81 | Portfolio</title>
+    <title>ggog81 | Systems & Automation</title>
     <style>
-        body { font-family: 'Courier New', monospace; background: #0d1117; color: #c9d1d9; padding: 2rem; }
-        .terminal { border: 1px solid #30363d; padding: 1.5rem; border-radius: 6px; max-width: 800px; margin: auto; }
-        .cmd { color: #58a6ff; }
-        h1 { color: #f0f6fc; border-bottom: 1px solid #30363d; }
-        a { color: #58a6ff; text-decoration: none; }
+        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --green: #3fb950; --border: #30363d; }
+        body { font-family: 'Segoe UI', 'Courier New', monospace; background: var(--bg); color: var(--text); line-height: 1.6; padding: 1rem; margin: 0; }
+        .container { max-width: 900px; margin: 2rem auto; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .header { background: #161b22; padding: 1rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; }
+        .dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+        .red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+        .content { padding: 2rem; }
+        h1, h2 { color: var(--accent); }
+        .code-block { background: #010409; padding: 1rem; border-radius: 6px; border: 1px solid var(--border); font-family: monospace; position: relative; }
+        .skill-tag { display: inline-block; background: rgba(88, 166, 255, 0.1); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem; margin-right: 5px; border: 1px solid var(--accent); }
+        a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        a:hover { border-bottom: 1px solid var(--accent); }
+        .project-card { margin-bottom: 2rem; padding-left: 1rem; border-left: 2px solid var(--border); }
     </style>
 </head>
 <body>
-    <div class="terminal">
-        <h1>ggog81.sh</h1>
-        <p><span class="cmd">status:</span> Online</p>
-        <p><span class="cmd">environment:</span> Debian aarch64 (Pixel 8a)</p>
-        <hr>
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Crypto-Terminal:</strong> Technical trading dashboard.</li>
-            <li><strong>Media Downloader:</strong> Python-based automation.</li>
-        </ul>
+    <div class="container">
+        <div class="header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span style="margin-left: 10px; font-size: 0.8rem; opacity: 0.7;">ggog81@debian: ~/portfolio</span>
+        </div>
+        <div class="content">
+            <h1>> ggog81</h1>
+            <p><strong>Developer & Systems Administrator</strong> specializing in Linux automation and terminal-based tools.</p>
+            
+            <div class="code-block">
+                <span style="color: var(--green);"># System Info</span><br>
+                OS: Debian GNU/Linux (aarch64)<br>
+                Host: Google Pixel 8a<br>
+                Shell: bash / zsh
+            </div>
+
+            <h2>Technical Skills</h2>
+            <div style="margin-bottom: 2rem;">
+                <span class="skill-tag">Python 3</span>
+                <span class="skill-tag">Bash Scripting</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Crypto API Integration</span>
+                <span class="skill-tag">Linux SysAdmin</span>
+            </div>
+
+            <h2>Core Projects</h2>
+            <div class="project-card">
+                <h3>📈 Crypto-Terminal Dash</h3>
+                <p>A high-performance shell script for real-time monitoring of the top 10 cryptocurrencies, tracking market caps and price fluctuations directly in the terminal.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>📥 Automated Media Downloader</h3>
+                <p>Python-based tool optimized for aarch64 environments to manage, download, and organize media assets with automatic directory routing.</p>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid var(--border); margin: 2rem 0;">
+            <p>Find me on GitHub: <a href="https://github.com/ggog81">@ggog81</a></p>
+        </div>
     </div>
 </body>
 </html>
